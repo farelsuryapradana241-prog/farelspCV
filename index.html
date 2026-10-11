@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - Farel Surya Pradana</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="cv-container">
+
+        <!-- Navigasi Halaman -->
+        <nav class="cv-nav">
+            <button id="btn-page-1" class="nav-btn active" onclick="switchPage(1)">Halaman 1</button>
+            <button id="btn-page-2" class="nav-btn" onclick="switchPage(2)">Halaman 2</button>
+        </nav>
+
+        <!-- ================= HALAMAN 1 ================= -->
+        <section id="page-1" class="cv-page active">
+            
+            <!-- Header Profile -->
+            <header class="profile-header">
+                <div class="profile-text">
+                    <h1 class="profile-name">Farel Surya Pradana</h1>
+                    <p class="profile-title">Mahasiswa Teknik Informatika</p>
+                    <div class="profile-contact">
+                        <span>📧 farelsp@gmail.com</span>
+                        <span>📱 0896-1601-1119</span>
+                        <span>📍 Ponorogo, Jawa Timur</span>
+                    </div>
+                </div>
+                <div class="profile-photo-wrapper">
+                    <div class="photo-box">
+                        <img src="w.png" alt="Foto Profil Farel Surya Pradana">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Section: Profil -->
+            <article class="content-box">
+                <h2 class="section-title">Profil Singkat</h2>
+                <p class="section-desc">
+                    Mahasiswa S1 Teknik Informatika yang berfokus pada pemrograman C++, struktur data, algoritma, serta arsitektur komputer. Berpengalaman sebagai PJ Kelas dengan kemampuan komunikasi dan koordinasi akademik yang baik.
+                </p>
+            </article>
+
+            <!-- Section: Pendidikan -->
+            <article class="content-box">
+                <h2 class="section-title">Pendidikan</h2>
+                <div class="item-block">
+                    <div class="item-header">
+                        <span class="item-title">S1 Teknik Informatika</span>
+                        <span class="item-date">2025 - Sekarang</span>
+                    </div>
+                    <p class="item-subtitle">Universitas Muhammadiyah Ponorogo</p>
+                    <p class="item-desc">Mahasiswa aktif Semester 3 (Kelas E1).</p>
+                </div>
+            </article>
+
+            <!-- Section: Pengalaman -->
+            <article class="content-box">
+                <h2 class="section-title">Pengalaman</h2>
+                <div class="item-block">
+                    <div class="item-header">
+                        <span class="item-title">Penanggung Jawab Kelas (PJ Kelas E1)</span>
+                        <span class="item-date">2026 - Sekarang</span>
+                    </div>
+                    <p class="item-subtitle">Universitas Muhammadiyah Ponorogo</p>
+                    <p class="item-desc">Penghubung komunikasi antara dosen dan mahasiswa serta mengelola administrasi perkuliahan.</p>
+                </div>
+            </article>
+
+            <!-- Footer Halaman 1 -->
+            <footer class="page-footer">
+                <span class="page-counter">Halaman 1 dari 2</span>
+                <button class="action-btn" onclick="switchPage(2)">Halaman Selanjutnya &raquo;</button>
+            </footer>
+
+        </section>
+
+        <!-- ================= HALAMAN 2 ================= -->
+        <section id="page-2" class="cv-page">
+            
+            <header class="sub-header">
+                <h3>Farel Surya Pradana — Curriculum Vitae</h3>
+            </header>
+
+            <!-- Section: Proyek -->
+            <article class="content-box">
+                <h2 class="section-title">Proyek & Praktikum</h2>
+                <div class="item-block">
+                    <div class="item-header">
+                        <span class="item-title">Simulasi Algoritma Pemrograman C++</span>
+                        <span class="item-date">2026</span>
+                    </div>
+                    <p class="item-desc">Membuat program Linear Search, Bubble Sort, Selection Sort, dan Insertion Sort menggunakan Code::Blocks dan Flowgorithm.</p>
+                </div>
+
+                <div class="item-block">
+                    <div class="item-header">
+                        <span class="item-title">Visualisasi Diagram & Topologi Sistem</span>
+                        <span class="item-date">2026</span>
+                    </div>
+                    <p class="item-desc">Merancang diagram alur data dan arsitektur bus sistem menggunakan Draw.io dan Mermaid.js.</p>
+                </div>
+            </article>
+
+            <!-- Section: Keahlian -->
+            <article class="content-box">
+                <h2 class="section-title">Keahlian & Tools</h2>
+                <ul class="skills-list">
+                    <li><strong>Bahasa Pemrograman:</strong> C++, Python, HTML, CSS</li>
+                    <li><strong>Perangkat Lunak:</strong> CodeBlocks, Flowgorithm, Draw.io, Git & GitHub</li>
+                    <li><strong>Bahasa:</strong> Bahasa Indonesia (Aktif), Bahasa Inggris (Pasif)</li>
+                </ul>
+            </article>
+
+            <!-- Footer Halaman 2 -->
+            <footer class="page-footer">
+                <button class="action-btn" onclick="switchPage(1)">&laquo; Halaman Sebelumnya</button>
+                <span class="page-counter">Halaman 2 dari 2</span>
+            </footer>
+
+        </section>
+
+    </main>
+
+    <!-- Script Switching Halaman -->
+    <script>
+        function switchPage(pageNumber) {
+            // Unactive semua halaman
+            document.querySelectorAll('.cv-page').forEach(page => page.classList.remove('active'));
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+
+            // Activate halaman tujuan
+            document.getElementById(`page-${pageNumber}`).classList.add('active');
+            document.getElementById(`btn-page-${pageNumber}`).classList.add('active');
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
